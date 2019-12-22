@@ -25,12 +25,13 @@ const StyledMedia = styled.a`
 
 export const SocialArea = ({ socialLinks }) => (
   <StyledSocialArea>
-    {socialLinks.map(({ icon, link }, index) => (
+    {socialLinks.map(({ icon, link, name }) => (
       <StyledMedia
         rel="noreferrer"
         role="link"
         target="_blank"
-        key={index}
+        title={name}
+        key={name}
         className={`icon fa ${icon}`}
         href={link}
       />

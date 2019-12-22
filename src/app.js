@@ -1,11 +1,11 @@
 import React from 'react'
 import { Header } from './components/header';
 import { UserProfile } from './components/body';
-import { injectGlobal } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import { pageTitle } from './profile.json';
 import { mobileScreenSize } from './styleguide/breakpoints';
 
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
   :root {
     --header-height: 300px;
 
@@ -26,6 +26,7 @@ document.title = pageTitle || 'Minimalist';
 export const App = () => (
 
   <React.Fragment>
+    <GlobalStyle />
     <Header />
     <UserProfile />
   </React.Fragment>

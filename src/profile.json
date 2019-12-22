@@ -14,6 +14,17 @@
       "name": "LinkedIn",
       "icon": "fa-linkedin",
       "link": "https://www.linkedin.com/in/luan-r-706883130/"
-    }
+    },
+    {
+      "name": "Blog",
+      "icon": "fa-rss-square",
+      "link": "https://blog.luan.raithz.com"
+    },
+    {
+      "name": "Twitter",
+      "icon": "fa-twitter",
+      "link": "https://twitter.com/Luuaannnnn"
+    },
+
   ]
 }
