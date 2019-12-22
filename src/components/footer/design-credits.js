@@ -7,17 +7,23 @@ const StyledLink = styled.a`
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
+
 `
 
-const StyledSpan = styled.span`
-  display: flex;
-  align-items: center;
-`
 
+const Container = styled.div`
+    display: flex;
+    align-items: center;
+    > * {
+        height: 14px;
+    }
+`
 
 export const DesignCredits = ({ content, link, arialLabel }) => (
-  <StyledSpan>
-    Design by:
+  <Container>
+      <span>
+        Design by:&nbsp;
+    </span>
     <StyledLink rel="noreferrer"role="link" href={link} arial-label={arialLabel}> {content} </StyledLink>
-  </StyledSpan>
+  </Container>
 );

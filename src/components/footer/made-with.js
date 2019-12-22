@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { themeColor } from '../../styleguide/colors';
 
 const StyledContainer = styled.span`
-  display: flex;
+  display: inline-flex;
   align-items: center;
   .icon {
     color: ${themeColor};
@@ -15,6 +15,7 @@ const StyledContainer = styled.span`
 export const MadeWith = ({ description }) =>
 (
   <StyledContainer>
-    {description} <span className='icon'>❤</span>
+      <span> {description} </span>
+      <span className='icon'>❤</span>
   </StyledContainer>
 )

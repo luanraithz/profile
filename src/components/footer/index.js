@@ -11,6 +11,14 @@ const StyledFooter = styled.footer`
   display: flex;
   color: ${grayLight};
   justify-content: space-between;
+  @media only screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    > div {
+        margin-bottom: 10px;
+    }
+  }
 `
 
 export const Footer = () => (
@@ -19,5 +27,5 @@ export const Footer = () => (
       content=" Juan (Aerea UI Kit)"
       arialLabel="Know more about Juan Valle and Aerea UI Kit"
       link="https://www.behance.net/gallery/36601943/AEREA-FREE-UI-KIT"/>
-  <MadeWith description="Made with React and"/>
+    <MadeWith description="Made with React and"/>
   </StyledFooter>);
