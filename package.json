@@ -28,7 +28,7 @@
     "assets": "^3.0.1",
     "font-awesome": "^4.7.0",
     "ramda": "^0.25.0",
-    "react": "^16.12.0",
+    "react": "^16.13.0",
     "react-dom": "^16.5.0",
     "styled": "^1.0.0",
     "styled-components": "^4.4.1"
