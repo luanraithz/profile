@@ -9,6 +9,10 @@ const StyledFooter = styled.footer`
   margin-top: auto;
   padding: .5rem 0.5rem;
   display: flex;
+  position: absolute;
+  width: 100%;
+  bottom: 5px;
+  padding: 0px 10px;
   color: ${grayLight};
   justify-content: space-between;
   @media only screen and (max-width: 600px) {

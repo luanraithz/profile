@@ -8,7 +8,11 @@ const StyledSocialArea = styled.div`
   margin: 0 auto;
 `;
 
-const StyledMedia = styled.a`
+export const StyledMedia = styled.a.attrs({
+  rel:"noreferrer",
+  role:"link",
+  target:"_blank"
+})`
   margin: 0 .5rem;
   &:active,
   &:link,
@@ -27,9 +31,6 @@ export const SocialArea = ({ socialLinks }) => (
   <StyledSocialArea>
     {socialLinks.map(({ icon, link, name }) => (
       <StyledMedia
-        rel="noreferrer"
-        role="link"
-        target="_blank"
         title={name}
         key={name}
         className={`icon fa ${icon}`}

@@ -23,17 +23,13 @@ const StyledProfileImage = styled.div`
   }
 
   >.image{
-    height: 270px;
-    width: 270px;
     border-radius:50%;
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
     background-image: url(${props => props.imageUrl});
-    @media screen and (max-width: 500px){
-      height: 140px;
-      width: 140px;
-    }
+    height: 100%;
+    width: 100%;
   }
 `
 

@@ -8,6 +8,7 @@ import { black, themeColor } from "../../styleguide/colors";
 
 const StyledContent = styled.main`
   text-align:center;
+  margin-bottom: 100px;
   padding:0 1rem;
 `
 
@@ -32,15 +33,15 @@ const Wrapper = styled.div`
 
 export const UserProfile = () =>
 (
-<Wrapper>
-  <StyledContent>
-    <Name>{name}</Name>
-    <Location>
-      {location}
-    </Location>
-    <Biography biography={biography}/>
-    <SocialArea socialLinks={socialLinks}/>
-  </StyledContent>
-  <Footer/>
-</Wrapper>
+  <React.Fragment>
+    <Wrapper>
+      <StyledContent>
+        <Name>{name}</Name>
+        <Location>{location}</Location>
+        <Biography biography={biography}/>
+        <SocialArea socialLinks={socialLinks}/>
+      </StyledContent>
+      <Footer/>
+    </Wrapper>
+  </React.Fragment>
 )

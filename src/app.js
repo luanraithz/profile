@@ -14,12 +14,17 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   body, html, #app {
-  font-family: 'Montserrat';
-  padding:0;
-  margin:0;
-  height: 100%;
-}
+    font-family: 'Montserrat';
+    padding:0;
+    margin:0;
+    height: 100%;
+  }
 `
 document.title = pageTitle || 'Minimalist';
 
