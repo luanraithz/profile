@@ -1,17 +1,26 @@
 import React from "react";
 import styled from "styled-components";
-import { Name } from "./name";
-import { Location } from "./location";
 import { name, location, biography, socialLinks} from "./../../profile.json";
 import { Biography } from './biography';
 import { SocialArea } from './social-area';
 import { Footer } from '../footer';
-import { headerHeight } from '../../styleguide/breakpoints';
+import { black, themeColor } from "../../styleguide/colors";
 
 const StyledContent = styled.main`
   text-align:center;
   padding:0 1rem;
 `
+
+const Name = styled.h2`
+  color: ${black};
+  font-weight:normal;
+  text-transform:uppercase;
+  `;
+
+const Location = styled.p`
+  color: ${themeColor};
+  font-weight:bold;
+  `;
 
 const Wrapper = styled.div`
   position: relative;
@@ -25,8 +34,10 @@ export const UserProfile = () =>
 (
 <Wrapper>
   <StyledContent>
-    <Name name={name}/>
-    <Location location={location}/>
+    <Name>{name}</Name>
+    <Location>
+      {location}
+    </Location>
     <Biography biography={biography}/>
     <SocialArea socialLinks={socialLinks}/>
   </StyledContent>
