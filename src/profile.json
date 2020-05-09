@@ -3,7 +3,6 @@
   "name": "Luan Raithz Machado",
   "themeColor": "#567dbc",
   "location": "Blumenau, Santa Catarina",
-  "biography": "",
   "socialLinks": [
     {
       "name": "Github",
@@ -24,7 +23,6 @@
       "name": "Twitter",
       "icon": "fa-twitter",
       "link": "https://twitter.com/Luuaannnnn"
-    },
-
+    }
   ]
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { name, location, biography, socialLinks} from "./../../profile.json";
+import { name, location, socialLinks} from "./../../profile.json";
 import { Biography } from './biography';
 import { SocialArea } from './social-area';
 import { Footer } from '../footer';
@@ -38,7 +38,7 @@ export const UserProfile = () =>
       <StyledContent>
         <Name>{name}</Name>
         <Location>{location}</Location>
-        <Biography biography={biography}/>
+        <Biography />
         <SocialArea socialLinks={socialLinks}/>
       </StyledContent>
       <Footer/>
