@@ -35,7 +35,7 @@ export const Biography = () => (
 
     <br/>
     <br/>
-    Currently (from 2020 to 2024 I hope) I'm studing <Highlighted>Computer Science</Highlighted>
+    Currently (from 2020 to 2024 I hope) I'm studying <Highlighted>Computer Science</Highlighted>
     {` `}at <StyledLink>
       <Highlighted>
         FURB
