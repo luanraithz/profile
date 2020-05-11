@@ -23,7 +23,7 @@ export const Biography = () => (
     <Highlighted>Minimalist.</Highlighted>
     <br/>
     <br/>
-    I was born in the 2000, and I work with software (professionally) every since 2018.
+    I was born in 2000, and I work with software (professionally) every since 2018.
     <br/>
     <br/>
     I like a lot of stuff, which include:{' '}
