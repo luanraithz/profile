@@ -35,16 +35,16 @@ export const Biography = () => (
 
     <br/>
     <br/>
-    Currently (from 2020 to 2024 I hope) I'm studing <Highlighted>Computer Science</Highlighted>
+    Currently (from 2020 to 2024 I hope) I'm studying <Highlighted>Computer Science</Highlighted>
     {` `}at <StyledLink
         href="http://www.furb.br/web/10/portugues"
         target="_blank"
         rel="noreferrer"
         role="link"
         arial-label="Where I study at">
-      <Highlighted>
-        FURB
-      </Highlighted>
+          <Highlighted>
+            FURB
+          </Highlighted>
       </StyledLink>
 
   </StyledBiography>
