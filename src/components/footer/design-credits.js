@@ -27,6 +27,6 @@ export const DesignCredits = ({ content, link, arialLabel }) => (
       <span>
         Design by:&nbsp;
     </span>
-    <StyledLink target="_blank" rel="noreferrer"role="link" href={link} arial-label={arialLabel}> {content} </StyledLink>
+    <StyledLink target="_blank" rel="noreferrer" role="link" href={link} arial-label={arialLabel}> {content} </StyledLink>
   </Container>
 );

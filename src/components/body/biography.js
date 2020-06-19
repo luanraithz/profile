@@ -23,7 +23,7 @@ export const Biography = () => (
     <Highlighted>Minimalist.</Highlighted>
     <br/>
     <br/>
-    I was born in the 2000, and I work with software (professionally) every since 2018.
+    I was born in 2000, and I work with software (professionally) every since 2018.
     <br/>
     <br/>
     I like a lot of stuff, which include:{' '}
@@ -36,7 +36,12 @@ export const Biography = () => (
     <br/>
     <br/>
     Currently (from 2020 to 2024 I hope) I'm studing <Highlighted>Computer Science</Highlighted>
-    {` `}at <StyledLink>
+    {` `}at <StyledLink
+        href="http://www.furb.br/web/10/portugues"
+        target="_blank"
+        rel="noreferrer"
+        role="link"
+        arial-label="Where I study at">
       <Highlighted>
         FURB
       </Highlighted>
