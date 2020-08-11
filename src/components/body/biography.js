@@ -20,7 +20,6 @@ const StyledBiography = styled.p`
 
 export const Biography = () => (
   <StyledBiography>
-    <Highlighted>Minimalist.</Highlighted>
     <br/>
     <br/>
     I was born in 2000, and I work with software (professionally) every since 2018.
@@ -28,14 +27,13 @@ export const Biography = () => (
     <br/>
     I like a lot of stuff, which include:{' '}
     <Highlighted>Linguistics</Highlighted>;{' '}
-    <Highlighted>Natural Languages</Highlighted>;{' '}
     <Highlighted>Distributed Systems</Highlighted>;{' '}
     <Highlighted>Functional Programming</Highlighted>;{' '}
     <Highlighted>React</Highlighted>.
 
     <br/>
     <br/>
-    Currently (from 2020 to 2024 I hope) I'm studying <Highlighted>Computer Science</Highlighted>
+    I study <Highlighted>Computer Science</Highlighted>
     {` `}at <StyledLink
         href="http://www.furb.br/web/10/portugues"
         target="_blank"
@@ -45,7 +43,7 @@ export const Biography = () => (
           <Highlighted>
             FURB
           </Highlighted>
-      </StyledLink>
+      </StyledLink>.
 
   </StyledBiography>
   )
