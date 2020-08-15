@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
   }
 `
-document.title = pageTitle || 'Minimalist';
+document.title = pageTitle;
 
 export const App = () => (
 

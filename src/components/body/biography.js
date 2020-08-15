@@ -15,19 +15,16 @@ const StyledBiography = styled.p`
     max-width: 900px;
   }
   margin: 0 auto;
-  margin-top: 5px;
 `
 
 export const Biography = () => (
   <StyledBiography>
-    <br/>
     <br/>
     I was born in 2000, and I work with software (professionally) ever since 2018.
     <br/>
     <br/>
     I like a lot of stuff, which include:{' '}
     <Highlighted>Linguistics</Highlighted>;{' '}
-    <Highlighted>Distributed Systems</Highlighted>;{' '}
     <Highlighted>Functional Programming</Highlighted>;{' '}
     <Highlighted>React</Highlighted>.
 
