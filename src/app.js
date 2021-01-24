@@ -1,9 +1,15 @@
 import React from 'react'
 import { Header } from './components/header';
+import { Gallery } from './components/gallery';
 import { UserProfile } from './components/body';
 import { createGlobalStyle } from 'styled-components';
 import { pageTitle } from './profile.json';
 import { mobileScreenSize } from './styleguide/breakpoints';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -33,6 +39,15 @@ export const App = () => (
   <React.Fragment>
     <GlobalStyle />
     <Header />
-    <UserProfile />
+      <Router>
+        <Switch>
+          <Route path="/gallery">
+            <Gallery />
+          </Route>
+          <Route path="/">
+            <UserProfile />
+          </Route>
+        </Switch>
+      </Router>
   </React.Fragment>
 )

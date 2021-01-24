@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { gray, themeColor } from '../../styleguide/colors';
 import { mobileScreenSize } from '../../styleguide/breakpoints';
-import { StyledLink } from '../footer/design-credits';
 
 const Highlighted = styled.span`
   color: ${themeColor};

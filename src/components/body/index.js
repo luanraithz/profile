@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { name, location, socialLinks} from "./../../profile.json";
 import { Biography } from './biography';
 import { SocialArea } from './social-area';
-import { Footer } from '../footer';
 import { black, themeColor } from "../../styleguide/colors";
 
 const StyledContent = styled.main`
@@ -41,7 +40,6 @@ export const UserProfile = () =>
         <Biography />
         <SocialArea socialLinks={socialLinks}/>
       </StyledContent>
-      <Footer/>
     </Wrapper>
   </React.Fragment>
 )
