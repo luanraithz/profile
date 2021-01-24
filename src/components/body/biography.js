@@ -29,18 +29,6 @@ export const Biography = () => (
     <Highlighted>React</Highlighted>.
 
     <br/>
-    <br/>
-    I study <Highlighted>Computer Science</Highlighted>
-    {` `}at <StyledLink
-        href="http://www.furb.br/web/10/portugues"
-        target="_blank"
-        rel="noreferrer"
-        role="link"
-        arial-label="Where I study at">
-          <Highlighted>
-            FURB
-          </Highlighted>
-      </StyledLink>.
 
   </StyledBiography>
   )
