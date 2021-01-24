@@ -38,8 +38,8 @@ export const App = () => (
 
   <React.Fragment>
     <GlobalStyle />
-    <Header />
       <Router>
+        <Header />
         <Switch>
           <Route path="/gallery">
             <Gallery />

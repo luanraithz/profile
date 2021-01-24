@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { themeColor } from '../../styleguide/colors';
+import { Link } from 'react-router-dom';
 
 const StyledProfileImage = styled.div`
   height: 270px;
@@ -35,7 +36,9 @@ const StyledProfileImage = styled.div`
 
 export const ProfileImage = props =>
   (
-    <StyledProfileImage {...props}>
-      <div role="img" aria-label="Profile photo" className="image"></div>
-    </StyledProfileImage>
+    <Link to="/">
+        <StyledProfileImage {...props}>
+          <div role="img" aria-label="Profile photo" className="image"></div>
+        </StyledProfileImage>
+    </Link>
   )

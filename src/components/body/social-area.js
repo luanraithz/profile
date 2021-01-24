@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { themeColor, grayLight } from "../../styleguide/colors";
 
 const StyledSocialArea = styled.div`
@@ -14,6 +15,7 @@ export const StyledMedia = styled.a.attrs({
   target:"_blank"
 })`
   margin: 0 .5rem;
+  color: ${grayLight};
   &:active,
   &:link,
   &:visited {
@@ -27,6 +29,24 @@ export const StyledMedia = styled.a.attrs({
   }
 `;
 
+export const StyledDiv = styled.span`
+  margin: 0 .5rem;
+  color: ${grayLight};
+  &:active,
+  &:link,
+  &:visited {
+    color: ${grayLight};
+    text-decoration: none;
+    outline: none;
+  }
+  &:hover {
+    color: ${themeColor};
+    cursor: pointer;
+  }
+`;
+
+
+
 export const SocialArea = ({ socialLinks }) => (
   <StyledSocialArea>
     {socialLinks.map(({ icon, link, name }) => (
@@ -37,5 +57,9 @@ export const SocialArea = ({ socialLinks }) => (
         href={link}
       />
     ))}
+    <Link to="/gallery">
+      <StyledDiv title="Galery" className="icon fa fa-picture-o"/>
+    </Link>
+
   </StyledSocialArea>
 );

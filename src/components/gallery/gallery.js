@@ -93,6 +93,7 @@ export const Gallery = () => {
             .then(s => s.json())
             .then(s => {
                 setLoading(false)
+                s.sort((a,b) => new Date(b.timeCreated) - new Date(a.timeCreated));
                 setPictures(s)
             })
     }, [])
@@ -106,7 +107,7 @@ export const Gallery = () => {
     return (
         <Centered>
             {focus && (<Focused url={focus.url} leave={() => setFocus(null)}/>)}
-            {pictures.map(x => (<Wrapper onClick={() => handleFocus(x)}><Image src={x.url} /></Wrapper>))}
+            {pictures.map(x => (<Wrapper key={x.url} onClick={() => handleFocus(x)}><Image src={x.url} /></Wrapper>))}
         </Centered>
     )
 }
