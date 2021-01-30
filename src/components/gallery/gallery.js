@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import html from './pictures.html'
 
 const Centered = styled.div`
     margin: 0 auto;
@@ -7,20 +8,25 @@ const Centered = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 100px;
-`
 
-const Wrapper = styled.a`
-    margin: 10px;
-    height: 250px;
-    cursor: pointer;
-    overflow: hidden;
-    border-radius: 2.08333% / 4.6875%;
+    .img-wrapper {
+        margin: 10px;
+        height: 250px;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 2.08333% / 4.6875%;
+    }
+    img {
+        border-radius: 2.08333% / 4.6875%;
+        overflow: hidden;
+        height: 100%;
+    }
 `
 
 const Image = styled.img`
-    border-radius: 2.08333% / 4.6875%;
-    overflow: hidden;
-    height: 100%;
+        border-radius: 2.08333% / 4.6875%;
+        overflow: hidden;
+        height: 100%;
 `
 
 const FullScreen = styled.div`
@@ -82,31 +88,17 @@ const Focused = ({ url, leave }) => {
 }
 
 export const Gallery = () => {
-    const [pictures, setPictures] = React.useState([])
-    const [loading, setLoading] = React.useState(true)
     const [focus, setFocus] = React.useState(null)
 
-    console.log(pictures)
-    React.useEffect(() => {
-        fetch("https://southamerica-east1-pessoal-292018.cloudfunctions.net/get-pictures")
-            .then(s => s.json())
-            .then(s => {
-                setLoading(false)
-                s.sort((a,b) => new Date(b.timeCreated) - new Date(a.timeCreated));
-                setPictures(s)
-            })
-    }, [])
-
     function handleFocus(x) {
-        setFocus(x)
-
+        setFocus({ url: x.target.src })
     }
 
-
     return (
-        <Centered>
+        <React.Fragment>
             {focus && (<Focused url={focus.url} leave={() => setFocus(null)}/>)}
-            {pictures.map(x => (<Wrapper key={x.url} onClick={() => handleFocus(x)}><Image src={x.url} /></Wrapper>))}
-        </Centered>
+            <Centered dangerouslySetInnerHTML={{ __html: html }} onClick={handleFocus}>
+            </Centered>
+        </React.Fragment>
     )
 }
