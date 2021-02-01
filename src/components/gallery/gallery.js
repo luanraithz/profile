@@ -64,10 +64,7 @@ const CloseButton = styled.button`
 const Focused = ({ url, leave }) => {
   React.useEffect(() => {
     function handleEsc({code }) {
-        console.log(code)
-      if(code === "Escape") {
-        leave()
-      }
+      if(code === "Escape") leave()
     }
     document.addEventListener("keydown", handleEsc)
     return () => {
