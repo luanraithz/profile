@@ -22,10 +22,7 @@ export const Biography = () => (
     Born in 2000, work in tech ever since 2018.
     <br/>
     <br/>
-    I like a lot of stuff, which include:{' '}
-    <Highlighted>Linguistics</Highlighted> and {' '}
-    <Highlighted>React</Highlighted> (not frontend, just React).
-
+    I like a lot of stuff, which include: <Highlighted>Linguistics</Highlighted> and <Highlighted>React</Highlighted>.
     <br/>
 
   </StyledBiography>
