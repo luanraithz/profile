@@ -9,26 +9,6 @@ const StyledSocialArea = styled.div`
   margin: 0 auto;
 `;
 
-export const StyledMedia = styled.a.attrs({
-  rel:"noreferrer",
-  role:"link",
-  target:"_blank"
-})`
-  margin: 0 .5rem;
-  color: ${grayLight};
-  &:active,
-  &:link,
-  &:visited {
-    color: ${grayLight};
-    text-decoration: none;
-    outline: none;
-  }
-  &:hover {
-    color: ${themeColor};
-    cursor: pointer;
-  }
-`;
-
 export const StyledDiv = styled.span`
   margin: 0 .5rem;
   color: ${grayLight};
@@ -49,13 +29,18 @@ export const StyledDiv = styled.span`
 
 export const SocialArea = ({ socialLinks }) => (
   <StyledSocialArea>
-    {socialLinks.map(({ icon, link, name }) => (
-      <StyledMedia
+    {socialLinks.map(({ link, name }) => (
+      <a
         title={name}
+        rel="noreferrer"
+        role="link"
+        target="_blank"
         key={name}
-        className={`icon fa ${icon}`}
         href={link}
-      />
+      >
+        | { name} |
+      </a>
     ))}
-  </StyledSocialArea>
+    <a title="products" href="/product-recommendations">| Products I like |</a>
+  </StyledSocialArea >
 );

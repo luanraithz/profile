@@ -3,11 +3,6 @@ import styled from 'styled-components';
 import { gray, themeColor } from '../../styleguide/colors';
 import { mobileScreenSize } from '../../styleguide/breakpoints';
 
-const Highlighted = styled.span`
-  color: ${themeColor};
-  font-weight:bold;
-  `;
-
 const StyledBiography = styled.p`
   color: ${gray};
   @media screen and (min-width:${mobileScreenSize}){

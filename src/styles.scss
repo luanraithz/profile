@@ -1,0 +1,19 @@
+a
+{
+  padding: .3em .5rem;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  &:active,
+  &:link,
+  &:visited {
+    color: var(--text-color);
+    text-decoration: none;
+    outline: none;
+  }
+  &:hover {
+    color: var(--theme-color);
+    cursor: pointer;
+  }
+}

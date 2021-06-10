@@ -5,7 +5,7 @@ import { Biography } from './biography';
 import { SocialArea } from './social-area';
 import { black, themeColor } from "../../styleguide/colors";
 
-const StyledContent = styled.main`
+export const StyledContent = styled.main`
   text-align:center;
   margin-bottom: 100px;
   padding:0 1rem;
@@ -22,7 +22,7 @@ const Location = styled.p`
   font-weight:bold;
   `;
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   position: relative;
   top: 100px;
   display: flex;

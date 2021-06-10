@@ -4,16 +4,21 @@ import { Header } from './components/header';
 import { UserProfile } from './components/body';
 import { createGlobalStyle } from 'styled-components';
 import { pageTitle } from './profile.json';
+import './styles.scss';
 import { mobileScreenSize } from './styleguide/breakpoints';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
+import { Recomendations } from './pages/recomendations';
 
+import { gray, themeColor } from './styleguide/colors';
 const GlobalStyle = createGlobalStyle`
   :root {
     --header-height: 300px;
+  --theme-color: ${themeColor};
+  --text-color: ${gray};
 
     @media screen and (max-width: ${mobileScreenSize}) {
       --header-height: 200px;
@@ -40,16 +45,17 @@ export const App = () => (
 
   <React.Fragment>
     <GlobalStyle />
-      <Router>
-        <Header />
-        <Switch>
-          {/* <Route path="/gallery">
+    <Router>
+      <Header />
+      <Switch>
+        {/* <Route path="/gallery">
             <Gallery />
           </Route> */}
-          <Route path="/">
-            <UserProfile />
-          </Route>
-        </Switch>
-      </Router>
+        <Route path="/product-recommendations" component={Recomendations} />
+        <Route exact path="/">
+          <UserProfile />
+        </Route>
+      </Switch>
+    </Router>
   </React.Fragment>
 )
