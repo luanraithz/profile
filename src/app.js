@@ -1,6 +1,6 @@
 import React from 'react'
 import { Header } from './components/header';
-import { Gallery } from './components/gallery';
+// import { Gallery } from './components/gallery';
 import { UserProfile } from './components/body';
 import { createGlobalStyle } from 'styled-components';
 import { pageTitle } from './profile.json';
@@ -25,8 +25,10 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+
   body, html, #app {
-    font-family: 'Montserrat';
+    background-color: #262626;
+    font-family: 'Roboto', sans-serif;
     padding:0;
     margin:0;
     height: 100%;
@@ -41,9 +43,9 @@ export const App = () => (
       <Router>
         <Header />
         <Switch>
-          <Route path="/gallery">
+          {/* <Route path="/gallery">
             <Gallery />
-          </Route>
+          </Route> */}
           <Route path="/">
             <UserProfile />
           </Route>

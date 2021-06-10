@@ -57,9 +57,5 @@ export const SocialArea = ({ socialLinks }) => (
         href={link}
       />
     ))}
-    <Link to="/gallery">
-      <StyledDiv title="Galery" className="icon fa fa-picture-o"/>
-    </Link>
-
   </StyledSocialArea>
 );

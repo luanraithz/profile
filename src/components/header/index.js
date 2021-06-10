@@ -14,7 +14,7 @@ const StyledHeader = styled.header`
 export const Header = () =>
   (
     <StyledHeader>
-      <Background imageUrl={background} />
+      {/* <Background imageUrl={background} /> */}
       <ProfileImage imageUrl={imageUrl} />
     </StyledHeader>
   )

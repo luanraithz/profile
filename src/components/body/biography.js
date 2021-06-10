@@ -19,11 +19,10 @@ const StyledBiography = styled.p`
 export const Biography = () => (
   <StyledBiography>
     <br/>
-    Born in 2000, work in tech ever since 2018.
+    Software Engineer
     <br/>
     <br/>
-    I like a lot of stuff, which include: <Highlighted>Linguistics</Highlighted> and <Highlighted>React</Highlighted>.
+    Most of my career I worked as a frontend dev, I had a brief experience (a few months) as a SRE.
     <br/>
-
   </StyledBiography>
   )
