@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import lastPostsHtml from "./../../blog/last_posts.html";
 import { name, location, socialLinks} from "./../../profile.json";
 import { Biography } from './biography';
 import { SocialArea } from './social-area';
@@ -38,6 +39,7 @@ export const UserProfile = () =>
         <Name>{name}</Name>
         <Location>{location}</Location>
         <Biography />
+        <div dangerouslySetInnerHTML={{__html: lastPostsHtml}} />
         <SocialArea socialLinks={socialLinks}/>
       </StyledContent>
     </Wrapper>

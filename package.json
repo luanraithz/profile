@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "build:blog": "node src/blog/convert.js"
   },
   "keywords": [
     "profile",
@@ -21,13 +22,29 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "parcel-bundler": "^1.10.0",
+    "parcel-plugin-static-files-copy": "^2.6.0",
     "sass": "^1.34.1"
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
+    "marked": "^2.0.7",
     "react": "^16.12.0",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "styled-components": "^4.4.1"
+  },
+  "staticFiles": {
+    "outDirPattern": "blog",
+    "staticPath": [
+      {
+        "staticPath": "src/blog",
+        "staticOutDir": "blog"
+      }
+    ],
+    "excludeGlob": [
+      "**/*.sh",
+      "**/*.js"
+    ],
+    "watcherGlob": "**"
   }
 }
