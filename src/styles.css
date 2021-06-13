@@ -1,0 +1,81 @@
+:root {
+  --header-height: 300px;
+  --theme-color: #567dbc;
+  --text-color: #c0c0c0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html, #app {
+  background-color: #262626;
+  font-family: 'Roboto', sans-serif;
+  padding:0;
+  margin:0;
+  height: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --header-height: 200px;
+  }
+}
+a {
+  padding: 0.3em 0.5rem;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+}
+a:active, a:link, a:visited {
+  color: var(--text-color);
+  text-decoration: none;
+  outline: none;
+}
+a:hover {
+  color: var(--theme-color);
+  cursor: pointer;
+}
+.blog-content {
+  padding: 1em;
+}
+.blog-content * {
+  font-size: 25px;
+}
+.blog-content .title {
+  margin-top: 15px;
+  font-size: 55px;
+  text-align: center;
+} 
+
+.blog-content .link {
+  font-size: 20px;
+}
+.blog-content div h2 {
+  color: var(--theme-color);
+  font-size: 35px;
+}
+.blog-content div b {
+  color: var(--theme-color);
+}
+.blog-content .date {
+  font-size: 20px;
+  color: var(--theme-color);
+  text-align: center;
+  margin-bottom: 35px;
+
+} 
+.blog-content div p {
+  margin-bottom: 15px;
+
+}
+.with-theme-color {
+  color: var(--theme-color);
+}
+
+.last-posts-menu {
+  margin: 15px 0;
+}

@@ -39,6 +39,10 @@
       {
         "staticPath": "src/blog",
         "staticOutDir": "blog"
+      },
+      {
+        "staticPath": "src/assets",
+        "staticOutDir": "assets"
       }
     ],
     "excludeGlob": [
