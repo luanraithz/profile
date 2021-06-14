@@ -1,7 +1,8 @@
 ---
 title: Checklist da Eterna Mediocridade
 date: 2020-12-01T23:56:29.798Z
-description: <i>How to</i> simples para continuar medíocre até o fim da vida"
+description: <i>How to</i> simples para continuar medíocre até o fim da vida
+tags: Lifestyle
 ---
 
 ## Não tenha valores básicos e consistentes que guiam suas decisões.

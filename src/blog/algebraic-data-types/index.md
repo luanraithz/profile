@@ -2,6 +2,7 @@
 title: Tipos de Dados Algébricos
 date: 2019-12-22T22:12:03.284Z
 description: Separação de domínios e tratamento de erros com foco em tipos
+tags: Tech, Types
 ---
 
 ### "Do or do not there is no try"

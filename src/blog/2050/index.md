@@ -2,6 +2,7 @@
 title: 2050
 date: 2020-09-01T23:24:42.342Z
 description: Como imagino um futuro infeliz
+tags: 2050, Novel
 ---
 
 O dia nasceu bonito em Nova Iorque, ao acordar você podia ver imediatamente como o jornal da cidade dava as boas notícias, o governo acabava de prover mais dinheiro para programas sociais de integração de imigrantes (apenas alguns tipos, claro) e para a educação superior em todo o estado! Que notícia incrível! John, antes mesmo de sair da cama teve seu dia alegrado pela notícia! Ele lembrava que algo parecido havia sido feito um ou dois meses atrás, mas isso não foi mencionado pelo jornal, então deve ter sido coisa da sua cabeça.
