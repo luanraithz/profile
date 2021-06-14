@@ -160,7 +160,6 @@ const tagsHtml = `
 
 const tagsPagePath = path.join(tagsPath, "index.html")
 
-fs.writeFileSync(tagsPagePath, withDefaultWrapper(tagsHtml, { title: "tags" }))
-console.log(withPosts)
+fs.writeFileSync(tagsPagePath, withDefaultWrapper(tagsHtml, { title: "Tags" }))
 
 
