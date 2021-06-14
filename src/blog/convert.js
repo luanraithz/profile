@@ -31,8 +31,7 @@ formatted.sort((b1, b2) => new Date(b2.header.date) - new Date(b1.header.date))
 
 const css = fs.readFileSync(path.join(__dirname, "..", "styles.css"))
 
-const withDefaultWrapper = (str, { title } = {}) => `
-<!DOCTYPE html>
+const withDefaultWrapper = (str, { title } = {}) => `<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -56,7 +55,7 @@ const withDefaultWrapper = (str, { title } = {}) => `
 `
 
 
-const toTag = x => `<a href="/blog/tags/${x}"><div class="tag">${x}</div></a>`
+const toTag = x => `<a href="/blog/tags/${x.toLowerCase()}"><div class="tag">${x}</div></a>`
 
 formatted.forEach(c => {
 	const htmlContent = marked(c.content)
@@ -132,7 +131,7 @@ if (!fs.existsSync(tagsPath)) fs.mkdirSync(tagsPath)
 
 
 withPosts.forEach(t => {
-	const p = path.join(tagsPath, `${t.tag}.html`)
+	const p = path.join(tagsPath, `${t.tag.toLowerCase()}.html`)
 	const html = withDefaultWrapper(`
 
 		<a href="/" class="link"> Home </a>
@@ -151,7 +150,7 @@ withPosts.forEach(t => {
 
 
 const tagsHtml = tags.reduce((acc, next) => {
-	acc += toTag(next.tag)
+	acc += toTag(next.toLowerCase())
 	return acc
 },"")
 
