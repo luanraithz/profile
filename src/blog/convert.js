@@ -55,7 +55,7 @@ const withDefaultWrapper = (str, { title } = {}) => `<!DOCTYPE html>
 `
 
 
-const toTag = x => `<a href="/blog/tags/${x.toLowerCase()}"><div class="tag">${x}</div></a>`
+const toTag = x => `<a href="/blog/tags/${x.toLowerCase()}.html"><div class="tag">${x}</div></a>`
 
 formatted.forEach(c => {
 	const htmlContent = marked(c.content)
