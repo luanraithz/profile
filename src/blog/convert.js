@@ -149,14 +149,18 @@ withPosts.forEach(t => {
 
 
 
-const tagsHtml = tags.reduce((acc, next) => {
-	acc += toTag(next.toLowerCase())
+const tagsHtml = `
+	<div style="display: inline-flex;">
+	${tags.reduce((acc, next) => {
+	acc += toTag(next)
 	return acc
-},"")
+}, "")}
+	</div>
+`
 
 const tagsPagePath = path.join(tagsPath, "index.html")
 
-fs.writeFileSync(tagsPagePath, withDefaultWrapper(tagsHtml, { title: "tags"}))
+fs.writeFileSync(tagsPagePath, withDefaultWrapper(tagsHtml, { title: "tags" }))
 console.log(withPosts)
 
 
