@@ -66,7 +66,7 @@ formatted.forEach(c => {
   <div class="blog-content">
 	<a href="/" class="link"> Home </a>
   	<h1 class="title">${c.header.title}</h1>
-	  <div style="display: inline-flex;">${c.header.tags.map(toTag)}</div>
+	  <div style="display: inline-flex;">${c.header.tags.map(toTag).join(" ")}</div>
 	  <h2 class="date">${m} - ${date.getFullYear()}</h2>
 	  <br/>
 	  <div>
