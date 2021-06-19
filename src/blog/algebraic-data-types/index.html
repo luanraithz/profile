@@ -19,6 +19,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: var(--text-color);
+}
+
+.secondary {
+    opacity: 0.5;
 }
 
 body, html, #app {
@@ -45,6 +50,11 @@ a:active, a:link, a:visited {
   color: var(--text-color);
   text-decoration: none;
   outline: none;
+}
+
+
+a:hover * {
+  color: var(--theme-color);
 }
 a:hover {
   color: var(--theme-color);
@@ -83,7 +93,7 @@ a:hover {
   margin-bottom: 15px;
 
 }
-.with-theme-color {
+.tcolor {
   color: var(--theme-color);
 }
 
@@ -95,7 +105,8 @@ a:hover {
   padding: 5px 15px;
   color: white;
   border-radius: 15px;
-}</style>
+}
+</style>
 </head>
 
 <body>
@@ -104,7 +115,7 @@ a:hover {
   <div class="blog-content">
 	<a href="/" class="link"> Home </a>
   	<h1 class="title">Tipos de Dados Algébricos</h1>
-	  <div style="display: inline-flex;"><a href="/blog/tags/tech.html"><div class="tag">Tech</div></a>,<a href="/blog/tags/types.html"><div class="tag">Types</div></a></div>
+	  <div style="display: inline-flex;"><a href="/blog/tags/tech.html"><div class="tag">Tech</div></a> <a href="/blog/tags/types.html"><div class="tag">Types</div></a></div>
 	  <h2 class="date">December - 2019</h2>
 	  <br/>
 	  <div>

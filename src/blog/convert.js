@@ -21,6 +21,7 @@ const formatted = folders.map(f => {
 
 	const { tags = "" } = headerProps
 	headerProps.tags = tags.split(",").map(x => x.trim())
+	headerProps.draft = headerProps.hasOwnProperty("draft")
 
 	return { header: headerProps, content: rest.join(""), path: f.name }
 })
@@ -81,7 +82,9 @@ formatted.forEach(c => {
 	fs.writeFileSync(path.join(__dirname, c.path, "index.html"), content)
 })
 
-const lastPosts = formatted.slice(0, 3)
+const isPublished = p => !p.header.draft
+const publishedPosts = formatted.filter(isPublished)
+const lastPosts = publishedPosts.slice(0, 3)
 
 const lastPostsMenu = lastPosts.reduce((acc, next) => {
 	// const MAX_DESCRIPTION_SIZE = 60
@@ -96,14 +99,14 @@ const lastPostsMenu = lastPosts.reduce((acc, next) => {
 
 	const date = new Date(next.header.date)
 	const m = date.toLocaleString("default", { month: "short" })
-	return acc + `\n<div><a href="/blog/${next.path}" class="with-theme-color">
+	return acc + `\n<div><a href="/blog/${next.path}" class="tcolor">
 		<small><b>${next.header.title} (${m}/${date.getFullYear()})</b></small></a><br/></div>`
 }, "")
 
 const wrapped = `
 
 <div class="last-posts-menu">
-	<h3>Last posts</h3>
+	<h3 class="tcolor">Last posts</h3>
 	<div>
 	${lastPostsMenu}
 	</div>
@@ -117,10 +120,10 @@ const wrapped = `
 fs.writeFileSync(path.join(__dirname, "last_posts.html"), wrapped)
 
 
-const tags = Array.from(new Set(formatted.map(x => x.header.tags).flatMap(x => x)))
+const tags = Array.from(new Set(publishedPosts.map(x => x.header.tags).flatMap(x => x)))
 const withPosts = tags
 	.map(t => {
-		const postsWithTag = formatted.filter(x => x.header.tags.includes(t))
+		const postsWithTag = publishedPosts.filter(x => x.header.tags.includes(t))
 		return { tag: t, posts: postsWithTag }
 	});
 

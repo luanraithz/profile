@@ -8,6 +8,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: var(--text-color);
+}
+
+.secondary {
+    opacity: 0.5;
 }
 
 body, html, #app {
@@ -34,6 +39,11 @@ a:active, a:link, a:visited {
   color: var(--text-color);
   text-decoration: none;
   outline: none;
+}
+
+
+a:hover * {
+  color: var(--theme-color);
 }
 a:hover {
   color: var(--theme-color);
@@ -72,7 +82,7 @@ a:hover {
   margin-bottom: 15px;
 
 }
-.with-theme-color {
+.tcolor {
   color: var(--theme-color);
 }
 
@@ -84,4 +94,9 @@ a:hover {
   padding: 5px 15px;
   color: white;
   border-radius: 15px;
+}
+
+.highlighted {
+    color: var(--theme-color);
+    font-weight: bold;
 }

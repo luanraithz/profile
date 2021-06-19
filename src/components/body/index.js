@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { Header } from './../header';
 import lastPostsHtml from "./../../blog/last_posts.html";
-import { name, location, socialLinks} from "./../../profile.json";
+import { name, socialLinks} from "./../../profile.json";
 import { Biography } from './biography';
 import { SocialArea } from './social-area';
 import { black, themeColor } from "../../styleguide/colors";
@@ -11,17 +12,6 @@ export const StyledContent = styled.main`
   margin-bottom: 100px;
   padding:0 1rem;
 `
-
-const Name = styled.h2`
-  color: ${black};
-  font-weight:normal;
-  text-transform:uppercase;
-  `;
-
-const Location = styled.p`
-  color: ${themeColor};
-  font-weight:bold;
-  `;
 
 export const Wrapper = styled.div`
   position: relative;
@@ -34,10 +24,11 @@ export const Wrapper = styled.div`
 export const UserProfile = () =>
 (
   <React.Fragment>
+    <Header />
     <Wrapper>
       <StyledContent>
-        <Name>{name}</Name>
-        <Location>{location}</Location>
+        <h1 className="highlighted">{name}</h1>
+        <p className="highlighted">Software Engineer </p>
         <Biography />
         <div dangerouslySetInnerHTML={{__html: lastPostsHtml}} />
         <SocialArea socialLinks={socialLinks}/>

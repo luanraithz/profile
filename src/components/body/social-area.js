@@ -42,5 +42,6 @@ export const SocialArea = ({ socialLinks }) => (
       </a>
     ))}
     <a title="products" href="/product-recommendations">| Products I like |</a>
+    <a title="bookmarks" href="/bookmarks">| My bookmarks |</a>
   </StyledSocialArea >
 );

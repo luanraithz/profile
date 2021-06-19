@@ -1,5 +1,4 @@
 import React from 'react'
-import { Header } from './components/header';
 import { UserProfile } from './components/body';
 import { pageTitle } from './profile.json';
 import './styles.css';
@@ -8,7 +7,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import { Recomendations } from './pages/recomendations';
+import { Recommendations, Bookmarks } from './pages/recomendations';
 
 document.title = pageTitle;
 
@@ -16,12 +15,12 @@ export const App = () => (
 
   <React.Fragment>
     <Router>
-      <Header />
       <Switch>
         {/* <Route path="/gallery">
             <Gallery />
           </Route> */}
-        <Route path="/product-recommendations" component={Recomendations} />
+        <Route path="/product-recommendations" component={Recommendations} />
+        <Route path="/bookmarks" component={Bookmarks} />
         <Route exact path="/">
           <UserProfile />
         </Route>
