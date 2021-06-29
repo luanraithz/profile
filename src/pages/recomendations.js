@@ -2,17 +2,29 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Wrapper, StyledContent } from '../components/body'
 
-const bMark = (title, link, description) => ({ title, link, description })
+const PT_BR = "Português"
+const EN_US = "English"
+
+const bMark = (title, link, description) => ({ title, link, description, lang: EN_US })
+const ptBMark = (title, link, description) => ({ title, link, description, lang: PT_BR })
 
 const BMarkList = [
-    bMark("Luke Smith's website", "https://lukesmith.xyz/", "Really good posts"),
-    bMark("Not related - (Luke Smith's podcast)", "https://notrelated.xyz/", "Big-brained podcast "),
-    bMark("Animagraffs", "https://animagraffs.com/", "Nice visual representantion of engineering stuff (How the engine works is my favorite)"),
-    bMark("Jordan Peterson's recommendations", "https://www.jordanbpeterson.com/great-books/")
+  bMark("Luke Smith's website", "https://lukesmith.xyz/", "Really good posts"),
+  bMark("Not related - (Luke Smith's podcast)", "https://notrelated.xyz/", "Big-brained podcast "),
+  bMark("Animagraffs", "https://animagraffs.com/", "Nice visual representantion of engineering stuff (How the engine works is my favorite)"),
+  bMark("Jordan Peterson's recommendations", "https://www.jordanbpeterson.com/great-books/"),
+  ptBMark("Ironberg Podcast", "https://www.youtube.com/c/renatocariani/videos", "Todos os episódios com o Kaminski e com o Abbas são ótimos"),
 ]
 
+const GrouppedBookmarks = BMarkList.reduce((acc, next) => {
+  acc[next.lang].push(next)
+  return acc
+}, { [EN_US]: [], [PT_BR]: [] })
+
+const GrouppedList = Object.entries(GrouppedBookmarks)
+
 export const Bookmarks = () => {
-    return (
+  return (
     <Wrapper>
       <StyledContent>
         <Link to="/"> Back to home </Link>
@@ -25,18 +37,26 @@ export const Bookmarks = () => {
         <h3 className="secondary"><i>
           There is no pattern, just random stuff I think is worth sharing
           </i>  </h3>
-        <br />
         <div style={{ display: "flex", flexDirection: "column" }}>
-        {BMarkList.map(({title, link, description}) => (
-            <span key={link} style={{ margin: "3px 0", display: "flex", flexDirection: "column",  textAlign: "center"}}>
-            <a href={link} target="_blank"> <b> {title}</b></a>
-            <span className="secondary">{description}</span>
-          </span>
-        ))}
+          {GrouppedList.map(([label, list]) => (
+            <React.Fragment>
+              <br/>
+              <h2 className="highlighted">{label}</h2>
+              {
+                list.map(({ title, link, description }) => (
+                  <span key={link} style={{ margin: "3px 0", display: "flex", flexDirection: "column", textAlign: "center" }}>
+                    <a href={link} target="_blank"> <b> {title}</b></a>
+                    <span className="secondary">{description}</span>
+                  </span>
+                ))
+              }
+            </React.Fragment>
+          ))
+          }
         </div>
       </StyledContent>
     </Wrapper>
-    )
+  )
 }
 
 export const Recommendations = () => {
